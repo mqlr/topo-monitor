@@ -1,0 +1,22 @@
+diff --git a/src/drag.js b/src/drag.js
+index 790d9c758a6fdae1e77217905c4ec0c29fb17931..50bc0d7c49381703bf7cdf0a5b7b1f275ae8ca3a 100644
+--- a/src/drag.js
++++ b/src/drag.js
+@@ -63,6 +63,8 @@ export default function() {
+   }
+ 
+   function mousemoved(event) {
++    // Extensions may replay a detached listener after its gesture has ended.
++    if (typeof gestures.mouse !== "function") return;
+     noevent(event);
+     if (!mousemoving) {
+       var dx = event.clientX - mousedownx, dy = event.clientY - mousedowny;
+@@ -72,6 +74,8 @@ export default function() {
+   }
+ 
+   function mouseupped(event) {
++    // Ignore duplicate releases before touching window listeners or selection state.
++    if (typeof gestures.mouse !== "function") return;
+     select(event.view).on("mousemove.drag mouseup.drag", null);
+     yesdrag(event.view, mousemoving);
+     noevent(event);

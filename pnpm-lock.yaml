@@ -4,6 +4,9 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+patchedDependencies:
+  d3-drag@3.0.0: c34c060fafeef717c92aede3f40d186bb4a00af94dab6f27cc48fd872f4739fd
+
 importers:
 
   .:
@@ -2581,7 +2584,7 @@ snapshots:
       '@types/d3-selection': 3.0.12
       '@types/d3-transition': 3.0.9
       '@types/d3-zoom': 3.0.9
-      d3-drag: 3.0.0
+      d3-drag: 3.0.0(patch_hash=c34c060fafeef717c92aede3f40d186bb4a00af94dab6f27cc48fd872f4739fd)
       d3-interpolate: 3.0.1
       d3-selection: 3.0.0
       d3-zoom: 3.0.0
@@ -2734,7 +2737,7 @@ snapshots:
 
   d3-dispatch@3.0.1: {}
 
-  d3-drag@3.0.0:
+  d3-drag@3.0.0(patch_hash=c34c060fafeef717c92aede3f40d186bb4a00af94dab6f27cc48fd872f4739fd):
     dependencies:
       d3-dispatch: 3.0.1
       d3-selection: 3.0.0
@@ -2761,7 +2764,7 @@ snapshots:
   d3-zoom@3.0.0:
     dependencies:
       d3-dispatch: 3.0.1
-      d3-drag: 3.0.0
+      d3-drag: 3.0.0(patch_hash=c34c060fafeef717c92aede3f40d186bb4a00af94dab6f27cc48fd872f4739fd)
       d3-interpolate: 3.0.1
       d3-selection: 3.0.0
       d3-transition: 3.0.1(d3-selection@3.0.0)

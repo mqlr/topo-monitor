@@ -3,3 +3,6 @@ pmOnFail: ignore
 minimumReleaseAgeExclude:
   - '@next/*'
   - next
+
+patchedDependencies:
+  d3-drag@3.0.0: patches/d3-drag@3.0.0.patch
