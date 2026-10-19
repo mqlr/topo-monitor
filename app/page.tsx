@@ -1,5 +1,5 @@
-import { TopologyEditor } from '@/components/topology/topology-editor'
+import { MonitorView } from '@/components/monitoring/monitor-view'
 
 export default function Page() {
-  return <TopologyEditor />
+  return <MonitorView />
 }
